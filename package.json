@@ -1,0 +1,31 @@
+{
+  "name": "vesta",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Money on autopilot — NEAR testnet MVP",
+  "workspaces": [
+    "contract",
+    "agent",
+    "web"
+  ],
+  "scripts": {
+    "build:contract": "npm run build -w contract",
+    "spike": "npm run spike -w contract",
+    "spike:testnet": "npm run spike:testnet -w contract",
+    "agent": "npm run start -w agent",
+    "dev": "npm run dev -w web",
+    "demo": "node scripts/demo.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "allowScripts": {
+    "near-sandbox": true,
+    "near-workspaces": true,
+    "secp256k1": true,
+    "near-sdk-js": true
+  },
+  "overrides": {
+    "near-sandbox": "0.3.5"
+  }
+}

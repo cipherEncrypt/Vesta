@@ -1,0 +1,16 @@
+{
+  "name": "@vesta/contract",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "env CARGO_TARGET_DIR=target cargo near build non-reproducible-wasm",
+    "spike": "node scripts/spike-sandbox.mjs",
+    "spike:testnet": "node scripts/spike-testnet.mjs"
+  },
+  "devDependencies": {
+    "near-api-js": "^5.1.0",
+    "near-sandbox": "0.3.5",
+    "near-workspaces": "^5.0.0"
+  }
+}
